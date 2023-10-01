@@ -62,3 +62,51 @@ li {
   margin-left: 12px;
   border: solid 1px black;
 }
+
+/* rockets.js */
+.container {
+  width: 75rem;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.rocket {
+  display: flex;
+  gap: 20px;
+}
+
+.main-part {
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  padding-top: 20px;
+}
+
+.details {
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+.reserve-btn {
+  color: white;
+  background-color: #057bf9;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.img img {
+  width: 300px;
+  height: 200px;
+}
+
+.loading {
+  border: 1px solid #3a86ff;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 220px 190px 20px 190px;
+}
