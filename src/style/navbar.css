@@ -132,18 +132,19 @@ li {
 .reserve-container {
   display: flex;
   flex-direction: column;
-  margin: 20px 60px 0 25rem;
+  padding-left: 20rem;
 }
 
 .title-r-r {
   font-size: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .r-rocket {
-  border: 1px solid rgb(149, 148, 148);
-  border-radius: 2px;
-  margin-left: 29rem;
+  border: 1px solid rgb(197, 196, 196);
+  border-radius: 4px;
+  margin-left: 25rem;
   text-align: start;
   width: 35rem;
   padding: 20px;
