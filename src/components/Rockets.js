@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getRockets, reserveRocket, cancelReservation } from '../redux/rockets/rocketsSlice';
+import { fetchRocketsData, reserveRocket, cancelReservation } from '../redux/rockets/rocketsSlice';
 import '../style/navbar.css';
 
 function Rockets() {
@@ -16,7 +16,7 @@ function Rockets() {
   };
 
   useEffect(() => {
-    dispatch(getRockets());
+    dispatch(fetchRocketsData());
   }, [dispatch]);
 
   if (isLoading) {

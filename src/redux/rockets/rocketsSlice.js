@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const URL = 'https://api.spacexdata.com/v4/rockets';
 
-export const getRockets = createAsyncThunk('rockets/getRockets', async () => {
+export const fetchRocketsData = createAsyncThunk('rockets/getRockets', async () => {
   const response = await axios.get(URL);
   return response.data;
 });
@@ -36,15 +36,15 @@ const rocketsSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(getRockets.pending, (state) => {
+      .addCase(fetchRocketsData.pending, (state) => {
         state.isLoading = true;
         state.error = null;
       })
-      .addCase(getRockets.fulfilled, (state, action) => {
+      .addCase(fetchRocketsData.fulfilled, (state, action) => {
         state.isLoading = false;
         state.rockets = action.payload;
       })
-      .addCase(getRockets.rejected, (state, action) => {
+      .addCase(fetchRocketsData.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.error.message;
       });
