@@ -65,14 +65,11 @@ li {
 
 /* rockets.js */
 .container {
-  width: 75rem;
-  margin: 0 auto;
-  padding-top: 40px;
+  margin: 20px 150px 0 120px;
 }
 
 .rocket {
   display: flex;
-  gap: 20px;
 }
 
 .main-part {
