@@ -1,10 +1,10 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const rocketsUrl = 'https://api.spacexdata.com/v4/rockets';
+const URL = 'https://api.spacexdata.com/v4/rockets';
 
-export const fetchRocketsData = createAsyncThunk('rockets/fetchRockets', async () => {
-  const response = await axios.get(rocketsUrl);
+export const fetchRocketsData = createAsyncThunk('rockets/getRockets', async () => {
+  const response = await axios.get(URL);
   return response.data;
 });
 
@@ -17,7 +17,23 @@ const initialState = {
 const rocketsSlice = createSlice({
   name: 'rockets',
   initialState,
-  reducers: {},
+  reducers: {
+    reserveRocket: (state, action) => {
+      const { reservedRocketId } = action.payload;
+      state.rockets = state.rockets.map((rocket) => {
+        if (rocket.id !== reservedRocketId) return rocket;
+        return { ...rocket, reserved: true };
+      });
+    },
+    cancelReservation: (state, action) => {
+      const { canceledRocketId } = action.payload;
+      state.rockets = state.rockets.map((rocket) => {
+        if (rocket.id !== canceledRocketId) return rocket;
+        return { ...rocket, reserved: false };
+      });
+    },
+
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchRocketsData.pending, (state) => {
@@ -34,5 +50,7 @@ const rocketsSlice = createSlice({
       });
   },
 });
+
+export const { reserveRocket, cancelReservation } = rocketsSlice.actions;
 
 export default rocketsSlice.reducer;
