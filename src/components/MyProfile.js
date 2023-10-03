@@ -1,9 +1,15 @@
 import React from 'react';
+import {
+  Container, Row,
+} from 'react-bootstrap';
+import Mission from './missions';
 
-function MyProfile() {
-  return (
-    <div>MyProfile</div>
-  );
-}
+const MyProfile = () => (
+  <Container>
+    <Row>
+      <Mission />
+    </Row>
+  </Container>
+);
 
 export default MyProfile;
