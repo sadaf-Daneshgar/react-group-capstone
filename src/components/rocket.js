@@ -1,16 +1,13 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import "../style/navbar.css";
+import { useSelector } from 'react-redux';
+import '../style/navbar.css';
 
 function ReservRocket() {
   const reservedRocketIds = useSelector(
-    (state) => state.rockets.reservedRockets
+    (state) => state.rockets.reservedRockets,
   );
-  const rockets = useSelector((state) =>
-    state.rockets.rockets.filter((rocket) =>
-      reservedRocketIds.includes(rocket.id)
-    )
-  );
+  const rockets = useSelector((state) => state.rockets.rockets.filter(
+    (rocket) => reservedRocketIds.includes(rocket.id),
+  ));
 
   return (
     <>
