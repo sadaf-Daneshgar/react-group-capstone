@@ -1,13 +1,13 @@
-import React from "react";
-import ReservRocket from "./rocket";
-import { Container, Row } from "react-bootstrap";
-import Mission from "./missions";
+import React from 'react';
+import { Container, Row } from 'react-bootstrap';
+import ReservRocket from './rocket';
+import Mission from './missions';
 
 const MyProfile = () => (
   <>
     <Container>
       <Row>
-      <ReservRocket />
+        <ReservRocket />
         <Mission />
       </Row>
     </Container>
