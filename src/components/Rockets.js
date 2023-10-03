@@ -16,7 +16,7 @@ function Rockets() {
   }
 
   if (error) {
-    return <div className="loading">Somthing wrong during fetching books</div>;
+    return <div className="loading">Somthing wrong during fetching...</div>;
   }
 
   return (
