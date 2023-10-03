@@ -1,16 +1,18 @@
 .Mission-desc {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
+  background-color: rgba(240, 236, 236, 0.39);
 }
 
 .btn {
   width: 140px;
   font-size: 15px;
-  background-color: rgb(168, 133, 133);
+  background-color: rgb(106, 132, 180);
   height: 40px;
   color: white;
   border: 1px solid transparent;
   text-align: center;
+  align-items: center;
   display: flex;
 }
 
