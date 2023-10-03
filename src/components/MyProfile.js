@@ -1,8 +1,11 @@
 import React from 'react';
+import ReservRocket from './rocket';
 
 function MyProfile() {
   return (
-    <div>MyProfile</div>
+    <div>
+      <ReservRocket />
+    </div>
   );
 }
 

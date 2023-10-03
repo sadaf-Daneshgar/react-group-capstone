@@ -1,50 +1,58 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
 
-const URL = 'https://api.spacexdata.com/v4/rockets';
+const URL = "https://api.spacexdata.com/v4/rockets";
 
-export const getRockets = createAsyncThunk('rockets/getRockets', async () => {
-  const response = await axios.get(URL);
-  return response.data;
-});
+export const fetchRocketsData = createAsyncThunk(
+  "rockets/fetchRocketsData",
+  async () => {
+    const response = await axios.get(URL);
+    return response.data;
+  }
+);
 
 const initialState = {
   rockets: [],
+  reservedRockets: [],
   isLoading: false,
   error: null,
 };
 
 const rocketsSlice = createSlice({
-  name: 'rockets',
+  name: "rockets",
   initialState,
   reducers: {
     reserveRocket: (state, action) => {
-      const { reservedRocketId } = action.payload;
-      state.rockets = state.rockets.map((rocket) => {
-        if (rocket.id !== reservedRocketId) return rocket;
-        return { ...rocket, reserved: true };
-      });
+      const rocketId = action.payload;
+      state.rockets = state.rockets.map((rocket) =>
+        rocket.id !== rocketId ? rocket : { ...rocket, reserved: true }
+      );
+      state.reservedRockets = [...state.reservedRockets, rocketId];
     },
     cancelReservation: (state, action) => {
-      const { canceledRocketId } = action.payload;
-      state.rockets = state.rockets.map((rocket) => {
-        if (rocket.id !== canceledRocketId) return rocket;
-        return { ...rocket, reserved: false };
-      });
+      const rocketId = action.payload;
+      state.rockets = state.rockets.map((rocket) =>
+        rocket.id !== rocketId ? rocket : { ...rocket, reserved: false }
+      );
+      state.reservedRockets = state.reservedRockets.filter(
+        (reservedId) => reservedId !== rocketId
+      ); 
     },
-
   },
   extraReducers: (builder) => {
     builder
-      .addCase(getRockets.pending, (state) => {
+      .addCase(fetchRocketsData.pending, (state) => {
         state.isLoading = true;
         state.error = null;
       })
-      .addCase(getRockets.fulfilled, (state, action) => {
+      .addCase(fetchRocketsData.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.rockets = action.payload;
+        state.rockets = action.payload.map((rocket) => ({
+          ...rocket,
+          reserved: state.reservedRockets.includes(rocket.id),
+        }));
       })
-      .addCase(getRockets.rejected, (state, action) => {
+      .addCase(fetchRocketsData.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.error.message;
       });

@@ -104,12 +104,16 @@ li {
 .reserved-btn {
   color: rgb(62, 62, 62);
   background-color: #fff;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
   border: 1px solid black;
 }
 
 .img img {
   width: 300px;
   height: 200px;
+  margin: 10px 0 10px 0;
 }
 
 .loading {
@@ -127,3 +131,26 @@ li {
   font-size: 16px;
   border-radius: 6px;
 }
+
+
+.reserve-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 60px 0 25rem;
+}
+
+.title-r-r {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.r-rocket {
+  border: 1px solid rgb(149, 148, 148);
+  border-radius: 2px;
+  margin-left: 29rem;
+  text-align: start;
+  width: 35rem;
+  padding: 20px;
+}
+
+
