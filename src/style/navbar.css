@@ -132,7 +132,6 @@ li {
   border-radius: 6px;
 }
 
-
 .reserve-container {
   display: flex;
   flex-direction: column;
@@ -152,5 +151,3 @@ li {
   width: 35rem;
   padding: 20px;
 }
-
-
