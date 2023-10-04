@@ -1,28 +1,37 @@
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getRocketsData } from '../redux/rocket/rocketsSlice';
+import RocketRender from './RocketRender';
 import '../style/navbar.css';
 
-function ReservRocket() {
-  const reservedRocketIds = useSelector(
-    (state) => state.rockets.reservedRockets,
+function Rocket() {
+  const dispatch = useDispatch();
+
+  const { rockets, status, error } = useSelector(
+    (state) => state.rockets,
   );
-  const rockets = useSelector((state) => state.rockets.rockets.filter(
-    (rocket) => reservedRocketIds.includes(rocket.id),
-  ));
+
+  useEffect(() => {
+    if (status === 'idle') {
+      dispatch(getRocketsData());
+    }
+  }, [status, dispatch]);
+
+  if (status === 'loading') {
+    return <div className="loading">Loading...</div>;
+  }
+
+  if (status === 'failed') {
+    return <div className="loading">{error}</div>;
+  }
 
   return (
-    <>
-      <div>
-        <div className="reserve-container">
-          <p className="title-r-r">My Rockets</p>
-          {rockets.map((rocket) => (
-            <div className="r-rocket" key={rocket.id}>
-              {rocket.name}
-            </div>
-          ))}
-        </div>
-      </div>
-    </>
+    <div className="container">
+      {rockets.map((Item) => (
+        <RocketRender key={Item.id} Item={Item} />
+      ))}
+    </div>
   );
 }
 
-export default ReservRocket;
+export default Rocket;

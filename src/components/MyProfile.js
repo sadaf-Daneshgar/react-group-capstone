@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
-import ReservRocket from './rocket';
+import ReservRocket from './RocketReserv';
 import Mission from './missions';
 
 const MyProfile = () => (
