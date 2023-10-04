@@ -5,7 +5,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Space Travelers' Hub ](#--space-travelers-hub--)
+- [🚀 Space Travelers' Hub ](#--space-travelers-hub--)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -25,7 +25,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [  Space Travelers' Hub ] <a name="about-project"></a>
+# 🚀 [  Space Travelers' Hub ] <a name="about-project"></a>
 
 **[  Space Travelers' Hub ]** Is our React-Redux group project.
 
@@ -171,6 +171,12 @@ npx eslint .
 - 👤 GitHub: [@Sadaf-Daneshgar](https://github.com/sadaf-Daneshgar)
 - 👤 Twitter: [@SadafDaneshgar](https://twitter.com/SadafDaneshgar)
 - 👤 LinkedIn: [Sadaf Daneshgar](https://www.linkedin.com/in/sadaf-daneshgar-2002saba/)
+---
+
+👤 **Ahmed**
+
+- 👤 GitHub: [@githubhandle](https://github.com/newtonah0)
+- 👤 LinkedIn: [Ah Mh](https://linkedin.com/in/ah-mh-4a0661271)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
