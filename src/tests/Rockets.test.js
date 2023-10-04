@@ -28,10 +28,10 @@ describe('Rocket Component', () => {
   });
 
   it('renders without errors', () => {
-    const component = create( 
+    const component = create(
       <Provider store={store}>
         <Rockets />
-      </Provider>
+      </Provider>,
     );
 
     const tree = component.toJSON();

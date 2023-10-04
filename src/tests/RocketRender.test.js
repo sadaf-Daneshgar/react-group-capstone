@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import RocketRender from '../components/RocketRender' 
+import RocketRender from '../components/RocketRender';
 
 jest.mock('react-redux', () => ({
   useDispatch: () => jest.fn(),
@@ -37,8 +37,8 @@ describe('RocketRender Component', () => {
   });
 
   it('validates PropTypes for Item prop', () => {
-    const invalidItem = {}; 
-    console.error = jest.fn(); 
+    const invalidItem = {};
+    console.error = jest.fn();
     render(<RocketRender Item={invalidItem} />);
     expect(console.error).toHaveBeenCalled();
   });
