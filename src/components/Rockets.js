@@ -4,7 +4,7 @@ import { getRocketsData } from '../redux/rocket/rocketsSlice';
 import RocketRender from './RocketRender';
 import '../style/navbar.css';
 
-function Rocket() {
+function Rockets() {
   const dispatch = useDispatch();
 
   const { rockets, status, error } = useSelector(
@@ -34,4 +34,4 @@ function Rocket() {
   );
 }
 
-export default Rocket;
+export default Rockets;
