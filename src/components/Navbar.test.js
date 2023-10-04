@@ -7,7 +7,7 @@ describe('Navigation', () => {
     render(
       <BrowserRouter>
         <Navigation />
-      </BrowserRouter>
+      </BrowserRouter>,
     );
     const logo = screen.getByAltText('Logo');
     const title = screen.getByText("Space Travelers' Hub");
@@ -19,7 +19,7 @@ describe('Navigation', () => {
     render(
       <BrowserRouter>
         <Navigation />
-      </BrowserRouter>
+      </BrowserRouter>,
     );
     const rocketsLink = screen.getByText('Rockets');
     const missionsLink = screen.getByText('Missions');
@@ -31,7 +31,7 @@ describe('Navigation', () => {
     render(
       <BrowserRouter>
         <Navigation />
-      </BrowserRouter>
+      </BrowserRouter>,
     );
     const myProfileLink = screen.getByText('My Profile');
     expect(myProfileLink).toBeInTheDocument();
