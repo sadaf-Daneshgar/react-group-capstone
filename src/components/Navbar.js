@@ -17,7 +17,7 @@ function Navigation() {
             <li className="nav-item">
               <NavLink
                 className={location.pathname === '/rockets' ? 'active' : ''}
-                to="/rockets"
+                to="/"
               >
                 Rockets
               </NavLink>

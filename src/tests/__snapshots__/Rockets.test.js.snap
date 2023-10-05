@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rocket Component renders without errors 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="rocket"
+  >
+    <div
+      className="img"
+    >
+      <img
+        alt="Sample Rocket"
+        src={
+          Array [
+            "image1.jpg",
+            "image2.jpg",
+          ]
+        }
+      />
+    </div>
+    <div
+      className="main-part"
+    >
+      <h3
+        className="rocket-title"
+      >
+        Sample Rocket
+      </h3>
+      <p
+        className="details"
+      >
+        This is a sample rocket
+      </p>
+      <button
+        className="reserve-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        Reserve Rocket
+      </button>
+    </div>
+  </div>
+</div>
+`;
