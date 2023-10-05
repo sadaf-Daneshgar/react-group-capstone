@@ -25,7 +25,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# [🚀  [ Space Travelers' Hub ] <a name="about-project"></a>
+# [🚀Space Travelers' Hub ] <a name="about-project"></a>
 
 **[ Space Travelers' Hub ]** Is our React-Redux group project.
 
