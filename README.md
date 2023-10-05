@@ -4,10 +4,11 @@
 
 # 📗 Table of Contents
 - [📗 Table of Contents](#-table-of-contents)
-- [🚀  Space Travelers' Hub](#about-project)
+- [📖  Space Travelers' Hub](#about-project)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -24,7 +25,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# [🚀Space Travelers' Hub ] <a name="about-project"></a>
+# [📖 Space Travelers' Hub ] <a name="about-project"></a>
 
 **[ Space Travelers' Hub ]** Is our React-Redux group project.
 
