@@ -69,7 +69,9 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
+## 🚀 Live Demo <a name="live-demo"></a>
 
+- ✅ Click [here](https://react-group-capstone.vercel.app/) to see the project
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
