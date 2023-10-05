@@ -3,9 +3,8 @@
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
-
 - [📗 Table of Contents](#-table-of-contents)
-- [🚀  About the Project](#about-project)
+- [🚀  Space Travelers' Hub](#about-project)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
