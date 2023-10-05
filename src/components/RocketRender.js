@@ -15,8 +15,8 @@ function RocketRender({ Item }) {
   };
 
   return (
-    <div className="rocket">
-      <div className="img">
+    <div className="rocket-container">
+      <div className="rocket-image">
         <img src={Item.flickr_images} alt={Item.name} />
       </div>
       <div className="main-part">
