@@ -8,7 +8,7 @@ function Rockets() {
   const dispatch = useDispatch();
 
   const { rockets, status, error } = useSelector(
-    (state) => state.rockets,
+    (store) => store.rockets,
   );
 
   useEffect(() => {

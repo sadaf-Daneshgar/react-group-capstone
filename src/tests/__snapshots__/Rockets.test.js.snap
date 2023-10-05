@@ -5,10 +5,10 @@ exports[`Rocket Component renders without errors 1`] = `
   className="container"
 >
   <div
-    className="rocket"
+    className="rocket-container"
   >
     <div
-      className="img"
+      className="rocket-image"
     >
       <img
         alt="Sample Rocket"
