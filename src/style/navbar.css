@@ -127,24 +127,3 @@ li {
   font-size: 16px;
   border-radius: 6px;
 }
-
-.reserve-container {
-  display: flex;
-  flex-direction: column;
-  padding-left: 20rem;
-}
-
-.title-r-r {
-  font-size: 30px;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.r-rocket {
-  border: 1px solid rgb(197, 196, 196);
-  border-radius: 4px;
-  margin-left: 25rem;
-  text-align: start;
-  width: 35rem;
-  padding: 20px;
-}
